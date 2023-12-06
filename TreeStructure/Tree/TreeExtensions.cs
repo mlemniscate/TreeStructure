@@ -25,7 +25,7 @@ public static class TreeExtensions
         return Tree<T>.FromLookup(lookup);
     }
 
-    private static List<T> GetParents<T>(ITree<T> node, List<T> parentNodes = null) where T : class
+    public static List<T> GetParents<T>(this ITree<T> node, List<T> parentNodes = null) where T : class
     {
         while (true)
         {
@@ -38,4 +38,5 @@ public static class TreeExtensions
             node = node.Parent;
         }
     }
+    
 }

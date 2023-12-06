@@ -24,7 +24,7 @@ await using (var scope = app.Services.CreateAsyncScope())
 {
     var context = scope.ServiceProvider.GetService<AppDbContext>();
     await context.Database.MigrateAsync();
-    await Seed.SeedFolderTree(context);
+    // await Seed.SeedFolderTree(context);
 }
 
 
